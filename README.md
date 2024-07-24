@@ -15,6 +15,10 @@ Be sure to call `at.asitplus.wallet.por.Initializer.initWithVcLib` first thing i
 
 ## Changelog
 
+Release 1.0.1:
+
+- Update to `vclib` 4.0.0
+
 Release 1.0.0:
 
 - Initial release, based on the Power of Representation Rulebook 0.2.0 from June 2024
