@@ -1,6 +1,6 @@
 package at.asitplus.wallet.por
 
-import at.asitplus.wallet.lib.data.jsonSerializer
+import at.asitplus.wallet.lib.data.vckJsonSerializer
 import io.kotest.core.spec.style.FunSpec
 import io.kotest.matchers.shouldBe
 import kotlinx.datetime.Instant
@@ -26,10 +26,10 @@ class SerializerTest : FunSpec({
             issuingCountry = randomString(),
             issuingJurisdiction = randomString(),
         )
-        val serialized = jsonSerializer.encodeToString(credential)
+        val serialized = vckJsonSerializer.encodeToString(credential)
             .also { println(it) }
 
-        val parsed: PowerOfRepresentation = jsonSerializer.decodeFromString(serialized)
+        val parsed: PowerOfRepresentation = vckJsonSerializer.decodeFromString(serialized)
 
         parsed shouldBe credential
     }
