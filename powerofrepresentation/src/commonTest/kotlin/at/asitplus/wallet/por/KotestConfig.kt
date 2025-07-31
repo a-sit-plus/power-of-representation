@@ -1,8 +1,9 @@
-package at.asitplus.wallet.por
+package io.kotest.provided
 
-import io.kotest.core.config.AbstractProjectConfig
+import at.asitplus.test.XmlReportingProjectConfig
+import at.asitplus.wallet.por.Initializer
 
-class KotestConfig : AbstractProjectConfig() {
+class ProjectConfig : XmlReportingProjectConfig() {
     init {
         Initializer.initWithVCK()
     }
